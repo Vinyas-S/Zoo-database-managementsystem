@@ -30,7 +30,7 @@ class Visitor(models.Model):
     visitor_id=models.IntegerField(primary_key=True)
     name=models.CharField(max_length=30)
     age_group=models.CharField(max_length=30)
-    phone_number=models.IntegerField()
+    phone_number=models.IntegerField(max_length=12,null=False, blank=False, unique=True)
     address=models.CharField(max_length=30)
     staff=models.ForeignKey(Staff,on_delete=models.CASCADE,related_name='%(class)s_staff_id')
     ticket_id=models.ForeignKey(Ticket,on_delete=models.CASCADE,related_name='%(class)s_ticket_id')

@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.core.exceptions import ObjectDoesNotExist
 from zooapp.models import *
 
 
+#class MyException(Exception):
+#   def showMessage(self):
+#        print("this record already exists")
 
 # Create your views here.
+
 def StaffData(request):
     return render(request,'inputdatastaff.html')
 def VisitorData(request):
@@ -29,7 +34,14 @@ def savedata(request):
     d = request.POST.get("sdesig")
     e = int(request.POST.get("ssalary"))
     f = request.POST.get("sdate")
-
+    #try:
+   # ab = Staff.objects.get(staff_id=a)
+        #if str(a).exists():
+         #   raise MyException
+        #else:
+         #   pass
+     #   return HttpResponse("<h1>record for this id already exists, please give a differet id</h1>")
+   # except ObjectDoesNotExist:
     obj=Staff(staff_id=a,staff_name=b,contact_number=c,designation=d, salary=e,joining_date=f)
     obj.save()
     return render(request,'success.html')
@@ -45,7 +57,7 @@ def datasave(request):
     k = request.POST.get("visaddr")
     lk = int(request.POST.get("sid"))
     try:
-         staid = Staff.objects.get(staff_id=lk)
+        staid = Staff.objects.get(staff_id=lk)
     except:
         return HttpResponse("<h1>entered staffid doesnt exist</h1>")
 
@@ -56,8 +68,7 @@ def datasave(request):
         return HttpResponse("<h1>entered ticketid doesnt exist</h1>")
 
 
-
-    obje = Visitor( visitor_id=g,  name=h,  age_group=i, phone_number=j, address=k, staff_id=staid, ticket_id=tickid)
+    obje = Visitor(visitor_id=g, name=h, age_group=i, phone_number=j, address=k, staff_id=lk, ticket_id=tickid)
     obje.save()
     return render(request, 'success.html')
 
@@ -115,20 +126,21 @@ def datasaving(request):
 def savingdata(request):
     ef = int(request.POST.get("animid"))
     try:
-        aniid=Animal.objects.get(animal_id=ef)
+       aniid=Animal.objects.get(animal_id=ef)
     except:
-        return HttpResponse("<h1>entered animalid doesnt exist</h1>")
+       return HttpResponse("<h1>entered animalid doesnt exist</h1>")
 
     gh = int(request.POST.get("sid"))
     try:
-        stid = Staff.objects.get(staff_id=gh)
+       stid = Staff.objects.get(staff_id=gh)
     except:
-        return HttpResponse("<h1>entered staffid doesnt exist</h1>")
+       return HttpResponse("<h1>entered staffid doesnt exist</h1>")
 
     kl = request.POST.get("animfood")
     mn = request.POST.get("animfeedtim")
     pq = request.POST.get("animmed")
-    objectss = Looks_After(animal_id=aniid, staff_id =stid,  food=kl,   feed_time=mn,  medicines=pq)
+
+    objectss = Looks_After(animal_id=ef, staff_id =gh,  food=kl,   feed_time=mn,  medicines=pq)
     objectss.save()
     return render(request, 'success.html')
 

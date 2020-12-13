@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'zoodatabase.wsgi.application'
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zooproject',
+        'NAME': 'vvzoomanagement',
         'USER':'root',
-        'PASSWORD':'',
+        'PASSWORD':'vin@dhoni',
         'HOST':'localhost',
         'PORT':'3306',
         'OPTIONS':{'init_command':
