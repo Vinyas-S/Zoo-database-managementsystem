@@ -57,7 +57,7 @@ def datasave(request):
 
 
 
-    obje = Visitor( visitor_id=g,  name=h,  age_group=i, phone_number=j, address=k, staff_id=staid, ticket_id=tickid)
+    obje = Visitor( visitor_id=g,  name=h,  age_group=i, phone_number=j, address=k, staff_id=lk, ticket_id=tickid)
     obje.save()
     return render(request, 'success.html')
 
@@ -128,7 +128,7 @@ def savingdata(request):
     kl = request.POST.get("animfood")
     mn = request.POST.get("animfeedtim")
     pq = request.POST.get("animmed")
-    objectss = Looks_After(animal_id=aniid, staff_id =stid,  food=kl,   feed_time=mn,  medicines=pq)
+    objectss = Looks_After(animal_id=ef, staff_id =gh,  food=kl,   feed_time=mn,  medicines=pq)
     objectss.save()
     return render(request, 'success.html')
 
