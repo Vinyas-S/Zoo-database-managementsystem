@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title>employee tnput</title>
+ <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/staff.css" type="text/css"/>
+    
+<title>Staff input Form</title>
 </head>
 <body>
-<h1>staff data entry form</h1>
-<form action="/savedata/" method="post">
-staffid<input type="text" name="sid" size="30"><br/>
-staffname<input type="text" name="sname" size="30"><br/>
-contactnumber<input type="number" name="snum" size="30"><br/>
-designation<input type="text" name="sdesig" size="30"<br/>
-salary<input type="number" name="ssalary" size="30"<br/>
-joiningdate<input type="date" name="sdate" size="30"<br/>
-<input type="submit" value="submit">
-<input type="reset " value="reset">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+        <div id="heading">
+            <h3>Staff Data Input</h3>
+        </div>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav> 
+        <div class="forms">
+            <div id="images">
+                <img  src="../Images/image1.jpg" class="avatar" src="../Images/image.jpg"   src="../Images/image2.jpg"  alt="" width="350" height="456"  />
+            </div>
+
+        <div id="form">    
+
+        <form action="/savedata/" method="post">
+            <fieldset>
+            <div class="form-group">
+                <label>Staff id</label><input type="text" name="sid" size="30" placeholder="Enter the staff id" required><br/>
+            </div> 
+            <div class="form-group">   
+                <label>Staff Name</label><input type="text" name="sname" size="30" placeholder="Enter the staff name" required><br/>
+            </div>
+            <div class="form-group">    
+                <label>Contact Number</label><input type="number" name="snum" size="30" placeholder="Enter the Phone NUM" required><br/>
+            </div>
+            <div class="form-group">    
+                <label>Designation</label><input type="text" name="sdesig" size="30" placeholder="Staff's Designation" required><br/>
+            </div>
+            <div class="form-group">    
+                <label>Salary</label><input type="number" name="ssalary" size="30" placeholder="SALARY" required><br/>
+            </div>
+            <div class="form-group">     
+                <label>JoiningDate</label><input type="date" name="sdate" size="30" placeholder="Staff's joining date" required><br/>
+            </div>    
+            <input type="submit" value="submit">
+            <input type="reset " value="reset">
+            </fieldset>
+        </div>
+        </div>   
+</div>
+        </form>
+</body>        

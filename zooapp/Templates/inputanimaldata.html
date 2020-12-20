@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head> 
-<title>animals input data</title>
+<head>
+ {% load static %}
+
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %}">
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'%}"></script>
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js' %}"></script>
+    <script src="{% static 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animal.css' %}">
 </head>
-<body>
-<h1>animal data entry form</h1>
-<form action="/datasaving/" method="post">
-animalid<input type="text" name="animid" size="30"><br/>
-animalname<input type="text" name="animname" size="30"><br/>
-gender<input type="text" name="animgend" size="30"><br/>
-species<input type="text" name="animspecies" size="30"<br/>
-birthdate<input type="date" name="animbirth" size="30"<br/>
-origin<input type="text" name="animorigin" size="30"<br/>
-category<input type="text" name="animcateg" size="30"<br/>
-cageno<input type="number" name="animcage" size="30"<br/>
-<input type="submit" value="submit">
-<input type="reset " value="reset">
+<title>Animals input Form</title>
+
+<body >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
+        <div id="heading">
+            <h3>Animal Data Input</h3>
+        </div>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav> 
+    
+        <div class="forms">
+            <div id="images">
+                <img  src="../Images/image1.jpg" class="avatar" src="../Images/image.jpg"   src="../Images/image2.jpg"  alt="" width="350" height="456"  />
+            </div>
+    
+        <div id="form">
+           
+        <form action="/datasaving/" method="post">
+            <fieldset>
+            <div class="form-group">
+                <label>Animal id</label><input type="text" name="animid" size="30" autofocus placeholder="Enter the animal id" required><br/>
+            </div>    
+            <div class="form-group">
+                <label>Animal name</label><input type="text" name="animname" size="30" autofocus placeholder="Enter the animal name"required><br/>
+            </div>
+            <div class="form-group">
+                <label>Animal Gender</label><input type="text" name="animgend" size="30" placeholder="Enter the Gender"required><br/>
+            </div>
+            <div class="form-group">
+                <label>Animal Species</label><input type="text" name="animspecies" size="30" placeholder="Enter the Species"required><br/>
+            <div class="form-group">
+                <label>Animal DoB</label><input type="date" name="animbirth" size="30" placeholder="DoB"required><br/>
+            </div>
+            <div class="form-group">
+                <label>Animal Origin</label><input type="text" name="animorigin" size="30" placeholder="Animal Origin "required><br/>
+            </div>
+            <div class="form-group">   
+                <label>Animal Category</label><input type="text" name="animcateg" size="30" placeholder="Animal Categ"required><br/>
+            </div>
+            <div class="form-group">
+                <label>Animal CageNo</label><input type="number" name="animcage" size="30" placeholder="Animal Cageno"required><br/>
+            </div>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </fieldset>
+        </div>
+        </div>   
+</div>
+    </form>
+</body>    

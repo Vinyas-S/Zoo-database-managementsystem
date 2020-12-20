@@ -1,0 +1,127 @@
+body:before {
+	content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: url("./Images/image2.jpg") no-repeat fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+}
+ 
+nav{
+    background-attachment: fixed;
+}
+
+ 
+input {
+    width: 100px;
+    height: 25px;
+   }
+   
+label{
+    display: inline-block;
+    width: 250px;
+    padding-left: 10px;
+    text-align: left;
+    color: white;
+}
+
+
+label, input, button {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box; 
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    z-index:10;
+}
+
+.forms {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    right:50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+    height: 600px;
+    margin:100px;
+	padding: 80px 40px;
+	background: rgba(0, 0, 0, 0.5);
+}
+.avatar {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	top: calc(-80px/2);
+	left: 190px;
+}
+
+.forms input[type=text], .forms input[type=date], .forms input[type=number] {
+	border: none;
+	border-bottom: 2px solid #fff;
+	background: transparent;
+    outline: none;
+    width:160px;
+	height: 30px;
+	color: #fff;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:white;
+    opacity: 1; /* Firefox */
+  }
+  
+
+
+#heading {
+    padding: 20px;
+  }
+
+
+  h3{
+    color: white;
+}
+
+
+#images {
+    position:relative;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+#images img{
+    display:none;
+    position:absolute;
+    width: 100%;
+    height: auto;
+    top:0;
+    left:0;
+    background-attachment: fixed;
+}    
+
+#images img.active{
+    display:block;
+  }
+
+img#images {
+    z-index: -1;
+ }

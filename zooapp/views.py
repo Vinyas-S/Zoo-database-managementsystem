@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from zooapp.models import *
+from django.shortcuts import get_object_or_404
 
 
 #class MyException(Exception):
@@ -119,7 +120,6 @@ def datasaving(request):
     objects = Animal(animal_id=t, animal_name=u, gender=v, speciesname=species, birth_date=y,  origin=z, category=ab, cageno=cd)
     objects.save()
     return render(request, 'success.html')
-
 
 
 @csrf_exempt
