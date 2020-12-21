@@ -11,7 +11,8 @@ from django.shortcuts import get_object_or_404
 #        print("this record already exists")
 
 # Create your views here.
-
+def Index(request):
+    return render(request,'home.html')
 def StaffData(request):
     return render(request,'inputdatastaff.html')
 def VisitorData(request):

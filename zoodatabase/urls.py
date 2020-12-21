@@ -20,8 +20,11 @@ from django.conf.urls.static import static
 from zooapp.views import *
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
-    path('StaffData/', StaffData),
+    path('', Index),
+
+    path('StaffData/', StaffData ,name='StaffData'),
     path('savedata/', savedata),
 
     path('VisitorData/',VisitorData),
@@ -33,7 +36,7 @@ urlpatterns = [
     path('SpeciesData/',SpeciesData),
     path('datasaved/', datasaved),
 
-    path('AnimalData/',AnimalData),
+    path('AnimalData/',AnimalData , name='AnimalData'),
     path('datasaving/', datasaving),
 
     path('LooksAfterData/',LooksAfterData),
