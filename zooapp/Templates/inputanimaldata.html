@@ -37,6 +37,7 @@
         <div class="forms">
                  
         <form action="/datasaving/" method="post">
+            {% csrf_token %}
             <fieldset>
             <div class="form-group">
                 <label>Animal id</label><input type="text" name="animid" size="30" autofocus placeholder="Enter the animal id" required><br/>

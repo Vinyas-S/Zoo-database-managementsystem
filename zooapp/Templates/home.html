@@ -19,22 +19,35 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div id="heading">
-                <h3>ZOO Database System</h3>
+                <h5 class ="text-white">ZOO Database System</h5>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
+            
+           
             <div id="nav">
                 <div id="navlinks">
-                    <a href="{% url 'StaffData'%}">Staff</a>
-                    <a href="./inputdataticket.html">Tickets</a>
-                    <a href="./inputdatavisitor.html">Visitors</a>
-                    <a href="{% url 'AnimalData' %}">Animal</a>
-                    <a href="./inputanimalspecies.html">Species</a>
-                    <a href="./inputlooksafterdata.html">A</a>
+                    
+                    <a href="{% url 'StaffData' %}"><h6>Staff</h6></a>
+                    <a href="./inputdataticket.html"><h6>Tickets</h6></a>
+                    <a href="./inputdatavisitor.html"><h6>Visitors</h6></a>
+                    <a href="{% url 'AnimalData' %}"><h6>Animal</h6></a>
+                    <a href="./inputanimalspecies.html"><h6>Species</h6></a>
+                    <a href="./inputlooksafterdata.html"><h6>LooksAfter</h6></a>
+            
+                    {% if user.is_authenticated %}
+                    <h6>HELLO ,{{user.first_name}}</h6>
+                    <a href="{% url 'logout' %}"><h6>Admin Logout</h6></a>
+                    {% else %}
+
+                    <a href="{% url 'register' %}"><h6>Admin Registration</h6></a>
+                    <a href="{% url 'login' %}"><h6>Admin Login</h6></a>
+                    {% endif %}
+                    
                 </div>
-            </div>    
-        </nav>
+            </div> 
+         </nav>       
         <div class="content">
 
         </div>

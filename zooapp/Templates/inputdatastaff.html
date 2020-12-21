@@ -31,6 +31,7 @@
         <div id="form">    
 
         <form action="/savedata/" method="post">
+            {% csrf_token %}
             <fieldset>
             <div class="form-group">
                 <label>Staff id</label><input type="text" name="sid" size="30" placeholder="Enter the staff id" required><br/>

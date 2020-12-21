@@ -15,9 +15,21 @@ body:before {
 nav{
     background-attachment: fixed;
     padding-right: 0%;
+
     z-index: 20;
 }
 
+#nav a {
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.3em;
+	color: #596365;
+}
 
 input {
     width: 100px;
@@ -86,11 +98,11 @@ label, input, button {
 
 
 
- h3{
+h6{
     padding: 20px;
     color: white;
-    text-align: center;
-    z-index: 21s;
+    width:50px;
+    background-attachment: fixed;
 }
 
 

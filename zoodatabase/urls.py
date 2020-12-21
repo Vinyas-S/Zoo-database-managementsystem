@@ -18,11 +18,17 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from zooapp.views import *
+from zooapp import views
 
 urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', Index),
+
+    path('register', views.register, name='register'),
+    path('login', views.login, name='login'),
+    path('logout', views.logout, name='logout'),
+
 
     path('StaffData/', StaffData ,name='StaffData'),
     path('savedata/', savedata),

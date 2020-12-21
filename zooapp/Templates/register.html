@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Admin Registration</title>
+</head>
+<body>
+    <h3>Admin Registration</h3>
+    <form action="register" method="post">
+        {% csrf_token %}
+
+        <input type="text" name="first_name" placeholder="FirstName" size="30"><br/>
+        <input type="text" name="last_name" placeholder="LastName" size="30"><br/>
+        <input type="text" name="user_name" placeholder="UserName" size="30"><br/>
+        <input type="password" name="password1" placeholder="PASSWORD" size="30"><br/>
+        <input type="password" name="password2" placeholder="ConfirmPassword" size="30"><br/>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+        
+    </form>
+</body>    
