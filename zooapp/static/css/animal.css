@@ -18,14 +18,6 @@ nav{
     z-index: 20;
 }
 
-div.nav{
-    background: url("../Images/logo.jpg") no-repeat fixed;
-    width: 500px;
-    height: 50px;
-    float: right;
-
-    
-}
 
 input {
     width: 100px;
@@ -93,13 +85,12 @@ label, input, button {
   
 
 
-#heading {
+
+ h3{
     padding: 20px;
-  }
-
-
-  h3{
     color: white;
+    text-align: center;
+    z-index: 21s;
 }
 
 
