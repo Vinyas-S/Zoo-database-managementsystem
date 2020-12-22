@@ -33,13 +33,13 @@ urlpatterns = [
     path('StaffData/', StaffData ,name='StaffData'),
     path('savedata/', savedata),
 
-    path('VisitorData/',VisitorData),
+    path('VisitorData/',VisitorData, name='VisitorData'),
     path('datasave/', datasave),
 
     path('TicketData/',TicketData),
     path('saveddata/', saveddata),
 
-    path('SpeciesData/',SpeciesData),
+    path('SpeciesData/',SpeciesData ,name='SpeciesData'),
     path('datasaved/', datasaved),
 
     path('AnimalData/',AnimalData , name='AnimalData'),

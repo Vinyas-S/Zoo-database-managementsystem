@@ -3,7 +3,7 @@ body:before {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background: url("../Images/image2.jpg") no-repeat fixed;
+	background-image: url(../Images/image5.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -15,8 +15,10 @@ body:before {
 nav{
     background-attachment: fixed;
     padding-right: 0%;
+
     z-index: 20;
 }
+
 
 #nav a {
 	text-decoration: none;
@@ -30,6 +32,7 @@ nav{
 	color: #596365;
 }
 
+ 
 input {
     width: 100px;
     height: 25px;
@@ -57,11 +60,11 @@ label, input, button {
 .forms {
 	position: absolute;
 	top: 40%;
-    left: 35%;
+    left: 45%;
     right:50%;
 	transform: translate(-50%, -50%);
 	width: 700px;
-    height: 400px;
+    height: 550px;
     margin:100px;
 	padding: 80px 40px;
 	background: rgba(0, 0, 0, 0.5);
@@ -81,7 +84,7 @@ label, input, button {
 	border-bottom: 2px solid #fff;
 	background: transparent;
     outline: none;
-    width:160px;
+    width:200px;
 	height: 30px;
 	color: #fff;
     font-size: 16px;
@@ -89,13 +92,11 @@ label, input, button {
     border-radius: 4px;
 }
 
-::placeholder {
+::placeholder { 
     color:white;
     opacity: 1; 
   }
   
-
-
 
 div.h3{
     padding: 20px;
@@ -103,6 +104,7 @@ div.h3{
     width:50px;
     background-attachment: fixed;
 }
+
 
 
 #images {
@@ -119,7 +121,6 @@ div.h3{
     background-repeat: no-repeat;
     background-size: cover;
     }
-
 
 #images img{
     display:none;

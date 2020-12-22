@@ -1,8 +1,10 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User,auth
+from django.contrib.auth.decorators import login_required
 from zooapp.models import *
 from django.shortcuts import get_object_or_404
 

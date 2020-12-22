@@ -3,8 +3,8 @@ body:before {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background: url("../Images/image2.jpg") no-repeat fixed;
-	background-position: center center;
+	background: url("../Images/image4.jpg") no-repeat fixed;
+	background-position: 0 10px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
@@ -15,6 +15,7 @@ body:before {
 nav{
     background-attachment: fixed;
     padding-right: 0%;
+
     z-index: 20;
 }
 
@@ -56,15 +57,15 @@ label, input, button {
 
 .forms {
 	position: absolute;
-	top: 40%;
-    left: 35%;
+	top: 30%;
+    left: 45%;
     right:50%;
 	transform: translate(-50%, -50%);
-	width: 700px;
+	width: 600px;
     height: 400px;
     margin:100px;
 	padding: 80px 40px;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.4);
 }
 .avatar {
 	position: absolute;
@@ -81,23 +82,23 @@ label, input, button {
 	border-bottom: 2px solid #fff;
 	background: transparent;
     outline: none;
-    width:160px;
-	height: 30px;
+    width:150px;
+	height: 20px;
 	color: #fff;
     font-size: 16px;
     border: 2px solid white;
     border-radius: 4px;
 }
 
-::placeholder {
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color:white;
-    opacity: 1; 
+    opacity: 1; /* Firefox */
   }
   
 
 
 
-div.h3{
+h4{
     padding: 20px;
     color: white;
     width:50px;
