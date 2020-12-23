@@ -24,17 +24,16 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            
-           
+                       
             <div id="nav">
                 <div id="navlinks">
                     {% if user.is_authenticated %}
                     <a href="{% url 'StaffData' %}"><h6>Staff</h6></a>
-                    <a href="./inputdataticket.html"><h6>Tickets</h6></a>
+                    <a href="{% url 'TicketData' %}"><h6>Tickets</h6></a>
                     <a href="{% url 'VisitorData' %}"><h6>Visitors</h6></a>
                     <a href="{% url 'AnimalData' %}"><h6>Animal</h6></a>
                     <a href="{% url 'SpeciesData' %}"><h6>Species</h6></a>
-                    <a href="./inputlooksafterdata.html"><h6>LooksAfter</h6></a>
+                    <a href="{% url 'LooksAfterData' %}"><h6>LooksAfter</h6></a>
                     {% else %}
                     <a href="{% url 'login' %}"><h6>Admin Login</h6></a>
                     {% endif %} 
@@ -43,7 +42,7 @@
                     <a href="{% url 'logout' %}"><h6>Admin Logout</h6></a>
                     {% else %}
 
-                    <a href="{% url 'register' %}"><h6>Admin Registration</h6></a>
+                    <!--<a href="{% url 'register' %}"><h6>Admin Registration</h6></a>-->
                     <!--<a href="{% url 'login' %}"><h6>Admin Login</h6></a>-->
                     {% endif %}
                     

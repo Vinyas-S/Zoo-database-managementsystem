@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
+ {% load static %}
+
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static '/bootstrap/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap/jquery.min.js' %}"></script>
+    <script src="{% static '/bootstrap/popper.min.js' %}"></script>
+    <script src="{% static '/bootstrap/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/looks_after.css' %}">
+
 <title>looksafter input data</title>
 </head>
 <body>
-<h1>looks after entry form</h1>
-<form action="/savingdata/" method="post">
-animalid<input type="text" name="animid" size="30"><br/>
-staffid<input type="text" name="sid" size="30"><br/>
-food<input type="text" name="animfood" size="30"><br/>
-feedtime<input type="time" name="animfeedtim" size="30"><br/>
-medicines<input type="text" name="animmed" size="30"><br/>
-<input type="submit" value="submit">
-<input type="reset " value="reset">
+<div id ="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div id="heading">
+            <h3 class ="text-white">LooksAfter Data Input</h3>
+        </div>  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <div class="forms">    
+        <form action="/datasaving/" method="post">
+            {% csrf_token %}
+            <fieldset>  
+            <form action="/savingdata/" method="post">
+            <div class="form-group">
+                <label>AnimalId</label><input type="text" name="animid" size="30" placeholder="Enter the AnimalId" required><br/>
+            </div>
+            <div class="form-group">    
+                <label>StaffId</label><input type="text" name="sid" size="30" placeholder="Enter the Staffid" required><br/>
+            </div>  
+            <div class="form-group">  
+                <label>Food</label><input type="text" name="animfood" size="30" placeholder="Enter the food given" required><br/>
+            </div>
+            <div class="form-group">
+                <label>FeedTime</label><input type="time" name="animfeedtim" size="30" placeholder="Enter the feed time " required><br/>
+            </div>
+            <div class="form-group">
+                <label>Medicines</label><input type="text" name="animmed" size="30" placeholder="Enter the medicines" required><br/>
+            </div>
+            <input type="submit" value="submit">
+            <input type="reset " value="reset">
+            </fieldset>
+        
+        </div>
+    </div>       
+</div>
+    </form>
+</body>    

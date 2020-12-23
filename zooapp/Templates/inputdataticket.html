@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
+{% load static %}
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static '/bootstrap/bootstrap.min.css' %}">
+    <script src="{% static '/bootstrap/jquery.min.js' %}"></script>
+    <script src="{% static '/bootstrap/popper.min.js' %}"></script>
+    <script src="{% static '/bootstrap/bootstrap.min.js' %}"></script> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ticket.css' %}">
+
 <title>ticket input data</title>
 </head>
 <body>
-<h1>ticket data entry form</h1>
-<form action="/saveddata/" method="post">
-ticketid<input type="text" name="ticid" size="30"><br/>
-ticketcost<input type="text" name="ticcost" size="30"><br/>
-checkintime<input type="time" name="ticintime" size="30"><br/>
-checkouttime<input type="time" name="ticouttime" size="30"<br/>
-paymenttype<input type="text" name="ticpay" size="30"<br/>
+    <div id ="navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div id="heading">
+                <h3 class ="text-white">Ticket Data Input</h3>
+            </div>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav> 
+        <div class="forms">
 
-<input type="submit" value="submit">
-<input type="reset " value="reset">
+        <form action="/saveddata/" method="post">
+        {% csrf_token %}
+        <fieldset>
+        <div class="form-group">
+            <label>Ticketno</label><input type="text" name="ticid" size="30" placeholder="Enter TicketId" required><br/>
+        </div>
+        <div class="form-group">   
+            <label>Ticketcost</label><input type="text" name="ticcost" size="30" PLACEHOLDER="Enter Ticket Cost" required><br/>
+        </div> 
+        <div class="form-group">   
+            <label>CheckinTime</label><input type="time" name="ticintime" size="30" placeholder="Time of Checkin" required><br/>
+        </div>
+        <div class="form-group">
+            <label>CheckoutTime</label><input type="time" name="ticouttime" size="30" placeholder="Time of Checkout" required><br/>
+        </div>
+        <div class="form-group">
+            <label>PaymentType</label><input type="text" name="ticpay" size="30" placeholder="(Cash or Card)"><br/>
+        </div>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">  
+        </fieldset>
+        
+        </div>
+    </div>       
+</div>
+    </form>
+</body>

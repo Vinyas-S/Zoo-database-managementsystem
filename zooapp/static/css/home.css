@@ -60,6 +60,7 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 92vh;
+    opacity: 1.0;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -67,6 +68,5 @@ body {
 }
 
 .bg-image {
-  /* Full height */
   height: 50%;
 }

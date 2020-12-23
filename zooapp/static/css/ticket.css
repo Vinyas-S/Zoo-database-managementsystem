@@ -3,8 +3,8 @@ body:before {
 	position: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(../Images/image3.jpg);
-	background-position: center center;
+	background: url("../Images/image6.jpg") no-repeat fixed;
+	background-position: 0 50px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
@@ -14,9 +14,22 @@ body:before {
  
 nav{
     background-attachment: fixed;
+    padding-right: 0%;
+    z-index: 20;
 }
 
- 
+#nav a {
+	text-decoration: none;
+	font-family: Cambria, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: 1.3em;
+	color: #596365;
+}
+
 input {
     width: 100px;
     height: 25px;
@@ -43,12 +56,12 @@ label, input, button {
 
 .forms {
 	position: absolute;
-	top: 50%;
-    left: 50%;
+	top: 40%;
+    left: 45%;
     right:50%;
 	transform: translate(-50%, -50%);
-	width: 700px;
-    height: 500px;
+	width: 600px;
+    height: 450px;
     margin:100px;
 	padding: 80px 40px;
 	background: rgba(0, 0, 0, 0.5);
@@ -64,11 +77,10 @@ label, input, button {
 }
 
 .forms input[type=text], .forms input[type=date], .forms input[type=number] {
-	border: none;
 	border-bottom: 2px solid #fff;
 	background: transparent;
     outline: none;
-    width:200px;
+    width:160px;
 	height: 30px;
 	color: #fff;
     font-size: 16px;
@@ -76,16 +88,13 @@ label, input, button {
     border-radius: 4px;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
     color:white;
-    opacity: 1; /* Firefox */
+    opacity: 1; 
   }
   
 
 
-#heading {
-    padding: 20px;
-  }
 
 div.h3{
     padding: 20px;
@@ -109,6 +118,7 @@ div.h3{
     background-repeat: no-repeat;
     background-size: cover;
     }
+
 
 #images img{
     display:none;

@@ -36,7 +36,7 @@ urlpatterns = [
     path('VisitorData/',VisitorData, name='VisitorData'),
     path('datasave/', datasave),
 
-    path('TicketData/',TicketData),
+    path('TicketData/',TicketData, name='TicketData'),
     path('saveddata/', saveddata),
 
     path('SpeciesData/',SpeciesData ,name='SpeciesData'),
@@ -45,7 +45,7 @@ urlpatterns = [
     path('AnimalData/',AnimalData , name='AnimalData'),
     path('datasaving/', datasaving),
 
-    path('LooksAfterData/',LooksAfterData),
+    path('LooksAfterData/',LooksAfterData, name='LooksAfterData'),
     path('savingdata/', savingdata)
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
