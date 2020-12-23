@@ -56,8 +56,8 @@ label, input, button {
 
 .forms {
 	position: absolute;
-	top: 40%;
-    left: 40%;
+	top: 42%;
+    left: 45%;
     right:50%;
 	transform: translate(-50%, -50%);
 	width: 700px;
