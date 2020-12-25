@@ -12,8 +12,8 @@ from django.shortcuts import get_object_or_404
 #class MyException(Exception):
 #   def showMessage(self):
 #        print("this record already exists")
-
 # Create your views here.
+
 def Index(request):
     return render(request,'home.html')
 def StaffData(request):
@@ -206,3 +206,15 @@ def deletealldata(request):
     obj.delete()
     msg="<h1>all the data is deleted </h1>"
     return HttpResponse(msg)
+
+
+def query1(request):
+    species_data = Species.objects.filter(population_status=10).values_list('speciesname')
+    data = Animal.objects.filter(speciesname__in=species_data).values('animal_name','origin')
+    print(data)
+    return render(request, 'query1.html',{'datas':data})
+    
+    
+    
+    
+    
