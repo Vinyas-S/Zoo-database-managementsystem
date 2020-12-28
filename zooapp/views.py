@@ -7,6 +7,7 @@ from django.contrib.auth.models import User,auth
 from django.contrib.auth.decorators import login_required
 from zooapp.models import *
 from django.shortcuts import get_object_or_404
+from django.db import connection
 
 
 #class MyException(Exception):
@@ -28,7 +29,9 @@ def AnimalData(request):
     return render(request, 'inputanimaldata.html')
 def LooksAfterData(request):
     return render(request, 'inputlooksafterdata.html')
-
+def query1(request):
+    return render(request,'query1.html')
+  
 
 
 def register(request):
@@ -177,7 +180,7 @@ def datasaving(request):
 def savingdata(request):
     ef = int(request.POST.get("animid"))
     try:
-       aniid=Animal.objects.get(animal_id=ef)
+       aniid = Animal.objects.get(animal_id=ef)
     except:
        return HttpResponse("<h1>entered animalid doesnt exist</h1>")
 
@@ -197,9 +200,12 @@ def savingdata(request):
 
 
 
+
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+
 
 def deletealldata(request):
     obj=Staff.objects.all()
@@ -208,13 +214,22 @@ def deletealldata(request):
     return HttpResponse(msg)
 
 
+
 def query1(request):
     species_data = Species.objects.filter(population_status=10).values_list('speciesname')
     data = Animal.objects.filter(speciesname__in=species_data).values('animal_name','origin')
     print(data)
     return render(request, 'query1.html',{'datas':data})
     
+
     
+def storedProcedure(request):
+  cursor = connection.cursor()
+  cursor.callproc('animals')
+  animalDetails=cursor.fetchall()
+  return render(request, 'storedProcedure.html', {'animalDetails': animalDetails})
+
+
     
     
     

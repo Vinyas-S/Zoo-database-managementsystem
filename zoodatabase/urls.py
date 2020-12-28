@@ -48,6 +48,8 @@ urlpatterns = [
     path('LooksAfterData/',LooksAfterData, name='LooksAfterData'),
     path('savingdata/', savingdata),
 
-    path('query1/',query1,name='query1')
+    path('query1/',query1,name='query1'),    
+    path('deletealldata/', deletealldata,name='deletealldata'),
+    path('storedProcedure/',storedProcedure, name='storedProcedure'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
