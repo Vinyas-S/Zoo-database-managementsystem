@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from zooapp.models import *
 from django.shortcuts import get_object_or_404
 from django.db import connection
+from django.db.models import OuterRef,Exists
 
 
 #class MyException(Exception):
@@ -228,6 +229,15 @@ def storedProcedure(request):
   cursor.callproc('animals')
   animalDetails=cursor.fetchall()
   return render(request, 'storedProcedure.html', {'animalDetails': animalDetails})
+
+
+
+
+def query2(request):
+  var = Looks_After.objects.filter(staff=OuterRef('staff_id'))
+  vari = Staff.objects.filter(~Exists(var))
+  return render(request, 'query2.html',{'data':vari})  
+
 
 
     

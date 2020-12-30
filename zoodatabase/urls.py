@@ -51,5 +51,7 @@ urlpatterns = [
     path('query1/',query1,name='query1'),    
     path('deletealldata/', deletealldata,name='deletealldata'),
     path('storedProcedure/',storedProcedure, name='storedProcedure'),
+    path('query2/',query2,name='query2'),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
