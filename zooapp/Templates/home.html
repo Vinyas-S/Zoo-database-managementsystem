@@ -55,7 +55,8 @@
                     </select>
                     <input type=button value="Go" onclick="goToNewPage()"/> 
                     {% else %}
-                    <a href="{% url 'login' %}"><h6>Admin Login</h6></a>
+                    <!--<a href="{% url 'Indexa' %}">
+                    <a href="{% url 'login' %}"><h6>Admin Login</h6></a>-->
                     {% endif %} 
 
                     {% if user.is_authenticated %}
@@ -68,7 +69,7 @@
                     {% endif %}
                 </div>
             </div> 
-         </nav>       
+        </nav>       
         <div class="content">
 
         </div>

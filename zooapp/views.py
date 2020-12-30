@@ -18,6 +18,8 @@ from django.db.models import OuterRef,Exists
 
 def Index(request):
     return render(request,'home.html')
+def Indexa(request):
+    return render(request,'home1.html')       
 def StaffData(request):
     return render(request,'inputdatastaff.html')
 def VisitorData(request):
@@ -72,7 +74,7 @@ def login(request):
 
         if user is not None:
             auth.login(request,user)
-            return redirect('/')
+            return redirect('Index')
         else:
             return HttpResponse('<h2>Invalid Credentials </h2>')
             return redirect('login')    
@@ -202,9 +204,10 @@ def savingdata(request):
 
 
 
+
 def logout(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('Indexa')
 
 
 
@@ -229,7 +232,6 @@ def storedProcedure(request):
   cursor.callproc('animals')
   animalDetails=cursor.fetchall()
   return render(request, 'storedProcedure.html', {'animalDetails': animalDetails})
-
 
 
 

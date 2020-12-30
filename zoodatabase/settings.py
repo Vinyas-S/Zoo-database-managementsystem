@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'zoodatabase.wsgi.application'
 DATABASES = {
 'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zoominiproject',
+        'NAME': 'varshinizoo',
         'USER':'root',
         'PASSWORD':'vin@dhoni',
         'HOST':'localhost',

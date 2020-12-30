@@ -23,7 +23,8 @@ from zooapp import views
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('', Index),
+    path('Index/', views.Index, name='Index'),
+    path('Indexa/',views.Indexa,name='Indexa'),
 
     path('register', views.register, name='register'),
     path('login', views.login, name='login'),
