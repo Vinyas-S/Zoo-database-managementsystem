@@ -127,3 +127,9 @@ div.h3{
 img#images {
     z-index: -1;
  }
+
+.data{
+    /*text-decoration: none;*/
+    color:white;
+    
+} 

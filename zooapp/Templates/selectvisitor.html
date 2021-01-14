@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title >VISITOR DATA</title>
+</head>
+<body>
+
+<h3> VISITOR DATA</h3>
+<table border="4">
+<th>visitor_id</th>
+<th>name</th>
+<th>age_group</th>
+<th>phone_number</th>
+<th>address</th>
+<th>Staff_id</th>
+<th>ticket_id</th>
+{% for d in data %}
+<tr>
+    <td>{{d.visitor_id}}</td>
+    <td>{{d.name}}</td>
+    <td>{{d.age_group}}</td>
+    <td>{{d.phone_number}}</td>
+    <td>{{d.address}}</td>
+    <td>{{d.staff_id}}</td>
+    <td>{{d.ticket_id_id}}</td>
+
+</tr>
+{% endfor %}
+</table>       

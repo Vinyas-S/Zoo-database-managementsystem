@@ -2,61 +2,55 @@
 <head>
 {% load static %}
 
-<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=p-Wp0ZZOQi3vNwPc118_BSngsIn9VZTXcpzTBh1J--KaMWgbt5u4kkSo-gSz6P7LYyzfv6dq3wnwx4haOw17x1Nr5xwdFcGnCQm2JQPzjBIdVIqLyZ0Q4A_wXQK7h1zoprhEzKQk8Ir1peHiRb8bPhepoXDUq3g-wONPe2QN-mPEkJnvPDKyAtq_b0JkFBqNn_V67BdNkhNY6TZPEKK4NyqJzyFKRVf02e568_YOxrPBuzLiSnmihRqaaM_s1jEojeoxzZic_ubDSx8A5MN3Fm1kLpRnsaZJAaCgHLw6jOS_jDyaVEn9nWxdEg0YuP8WXzQWbATPopxk86dX4AzTiURBKOWQxuU6SHCk7dKX1ioavckCx6JSbwkWzuDiUiuQxim6SK0LNda1Duugg3XnXqBgsN_czosF6nbmu4W_U4PWhVB-dh0s8_rieGjy7QhhNpQvte6jKZIU7QA_cxV6FnKeHb8QeYGGAx6HrsPLx_hL6FsU8Lh1kzCo5Ff0gCkdXZsp5f6oQZMUmBocaCGaEQUCpCqPmagCWM_JzH88L1TrpSuFZ6InDXH8-aVkn8lMqoM8C-vZSfBv7PmAkV12UoCW3v6Hhoy9sgCCpbwa9aL9NCNKLuPYYY6tBV___8X4MqrNXcj17p8gWmOrK1W-8z9lyG89mlMUlh9ByUDDGvW-sSiselcFlzR01thhJc3-iUT8uhzE09w4ZQYdOe_TWFVcIz25tAWgsYflQRmHlIKIgcU-ljwOr38Lf8rB9UIyoCFG6adEVBKmAY-CuDB6XzN710S0XBGcCxgDGf5E0wBIB8Yaqi_6ZYkRG-Tb42M9A4mBOHzS6fwUo2tV6keHtVlRgXIVDKg2iVDQ5UhqQhf-CS4iOeSOTbu5WHf2-fvETtNuDLDAPPbjWqUaIpwv95Foa3vxIKNjgjlPk4IZ2JgRwCaV1YKowhjZoC4K5ShYkn9TKD1nx9cLL26YMplxiJxBnGrho_QSlNuZJ-2OceD_RL7oaEI5QzHtBcvAbLRm9k3tJ4H53_8z52JP_4HIblbiKCqYv4Vc_IvlL85nRRvtfeILPw1-gTpf9542SjzSbsk8xT6qkLJM5GbHwNAIns8eyawB9qYTryrrOa9L9GJSrPVRUhuLvG4Q6wOh3UM3ThKxNcdD5qPQaR3vz_EWGE5umitqkjQltOSlYS-yeorYBCuD7pfAcitFSQgD_G3qO1__LR293_0oABYZBQDIFw" nonce="638683cb2d5f1ab9add6277ad5867024" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPThlNzQ4OTk1ZGUmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNjg3NTEyODEzMjMwODk3MTI1JnRoPTE3NmIzZmY2N2E4YzM3ZTUmdmlldz1hdHQmZGlzcD1zYWZlJnJlYWxhdHRpZD1mX2tqYmkxeGtmMCZzYWRkYmF0PUFOR2pkSjhjMG0tZDQtQnh6ekgtVEVoNGd1X0kzVTBPbHE2UUE1bHBCQW53bk1lanpmSVpreVAwR2VCVmlCU3FiM3lVXzRKcjlORGNGeE9mYlV6X2M2c0Fmb1A0a1BzaXJoTW9CWlpTRTdueEQ5TktEU1lEM0M0cW1UMHlDZC1NTnJzNlJQUGlXV3d1by1ENWg2ZEV0VmM3VnpZakN2TGFfVHFxMjBfbldSTTRReWUtbG44LTdfZmRhbjRyd1lpNWlKTV83bDRBMEdlc0gxS19NWC0tYl9lU3FOZW01Rm9yOVJwRlI4UTFraS1RSUQzb2RzcDNHOVRUTEpYQlhUeDd4RlEtTlZOakhKZmFwSTBwX3haSTcwTUJsMTlCUm9uRlB2NzJOUERFRG1nR0hMQXBHY3NsalFpcXN0M1pHVVdxMnR4dW9udWRTVFVPTzlDdzVwNjRhanlEQmdWVzYzNmFMV0x6WjI2ZlZkeENyNTZobUQydUFBNjFkbU82VlQ0MF9uSkw0Sm9hZWtOVUtmSVVrclhZWEJMT3ZWY1ZVODBLd2dneE9CNjBhNF8tbVNaeUlNNE9DSTVFVTc0OU52VWlwUlEtanNnOUR2V0ROQjljOEQ2VjB4Sl8tNkMwLTBTbC1nS3oyTF9rSzlTNU5vSkpkR3d3UmY5eG1FSW00NnVCUHBoLXMyX0dkeXhGYmlaVVNhQjdnbUFGYXllb1VPUmxrZ2JMVlpRTXc3VU56cWdWY242eWZoOFdnNkY3Wmx2R3JiRkt5aE1xRk12MWhUYVpSNktvNW5VenhhQU9wbENxSlpaLXF1TjFuSnpkTXBtRHd2LU1SMnFRR3JqUnViWWVySHYxQ21QalkzREVXNGxOWUkxcno4XzJvNUZVOTgxWXdTb1drUndpc0RkMEVFd0pIQm84WDRjSWZqaVlDS3M"/><style>
 body{
 	background-image: url("https://images.pexels.com/photos/139312/pexels-photo-139312.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 	background-position:cover;
-	
 	padding: 18px;
 	background-size:100%;
 	}
 	
 
-div{
-width:850px;
-padding:10px;
-border:1px solid black;
+div.nav{
+width:1280px;
+padding:5px;
+border:0.5px solid black;
 color:white;
 background-color:black;
 }
+
+
 .button{
 border:black;
 padding:15px 32px;
 }
+
+
 .div1{
 margin:auto;
 padding: 20px;
 width:720px;
 display:box;
-
 box-orient:verticle;
-box-align:right;;
+box-align:right;
 box-pack:end;
 position:absolute;
- right:23px;
- top:140px;
- 
-}
-
-
-</style>
-</head>
-<body>
-
-
-<div>Zoo database system  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<button  type="button"  onclick=" window.location.href='{% url 'login' %}';"</>Admin login</button></div>
-{% if user.is_authenticated %}
-<a href="{% url 'Index' %}"></a>
-{% else %}
-<a href="#">
-{% endif %}
-<style>
-.button{
+border:0.5px solid black;
 background-color:black;
 color:white;
-padding:10px 20px;
-display:block;
+right:260px;
+top:250px;
+}
+
+button{
+background-color:white;
+color:black;
+position: absolute;
+right: 100px;
+top: 50px;
 }
 
 div.container{
@@ -66,13 +60,30 @@ div.container{
  padding: 10px;
  margin:10px;
  text-align:center;
+ position:absolute;
  box-align:start;
  box-align:left;
  box-align:end;
- text-decoration:none;
+ top:465px;
+ color:white;
 
  }
  
+ .contain{
+ background-color:grey;
+ width:350px;
+ border: 10px solid green;
+ padding: 10px;
+ margin:10px;
+ text-align:center;
+ position:absolute;
+ box-align:start;
+ box-align:left;
+ box-align:end;
+ top:625px;
+ color:white;
+
+ }
  
  
  
@@ -84,8 +95,12 @@ div.container{
  margin:10px;
  text-align:center;
  position:absolute;
+ box-align:start;
+ box-align:left;
+ color:white;
+ box-align:end;
  right:10px;
- top:445px;
+ top:465px;
  
  
  }
@@ -98,8 +113,9 @@ div.container{
  margin:10px;
  text-align:center;
  position:absolute;
- right:270px;
+ right:475px;
  top:800px;
+ color:white;
  }
  
  div.con{
@@ -108,91 +124,113 @@ padding:30px;
 border:1px solid black;
 color:white;
 text-align:left;
- position:absolute;
- right:20px;
- top:1200px;
-
+position:absolute;
+right:200px;
+top:1200px;
 height:90px;
+border:0.5px solid black;
+background-color:black;
+color:white;
 }
  
  
 </style>
+</head>
+
+<body>
+
+
+<div class="nav">
+<h3>Zoo database system</h3> 
+<button  type="button"  style="float:right" onclick=" window.location.href='{% url 'login' %}';">Admin login</button></div>
+    {% if user.is_authenticated %}
+    <a href="{% url 'Index' %}"></a>
+    {% else %}
+    <a href="#">
+    {% endif %}
 
 
 
-<h2>MENU &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Visit a zoo!</h2>
+<marquee  behavior="slide" direction="left" >
+    <img src="../static/Images/index.jpeg" width="160" height="80" scrollamount="12" alt="Natural" />
+    <img src="../static/Images/tiger.jpeg" width="160" height="80" scrollamount="12" alt="Natural" />
+    <img src="../static/Images/panda.jpeg" width="160" height="80"  scrollamount="12" alt="Natural" />
+    <img src="../static/Images/croc.jpeg" width="160" height="80"  scrollamount="12" alt="Natural" />
+    <img src="../static/Images/pea.jpeg" width="160" height="80"   scrollamount="12" alt="Natural" />
+    <img src="../static/Images/deer.jpeg" width="160" height="80"  scrollamount="12" alt="Natural" />
+    <img src="../static/Images/king.jpeg" width="160" height="80"  scrollamount="12" alt="Natural" />
+    <img src="../static/Images/fish.jpeg" width="160" height="80"  scrollamount="12" alt="Natural" />
+</marquee>
 
 
 
 
+<h2>Why visit a zoo!</h2>
+
+
+<div class="div1">
+       <h4> Visit to a zoo offers us an oppurtunity to see the wild animals.Zoo ia a place where we can see different species of animals and birds in one place.A visit to a zoo gives us both entertainment and information.</h4>
+</div>
 
 
 
 
-<button class="button">Timings </button>
-<button class="button">Ticket</button>
-<button class="button">Facilities</button>
-<button class="button">Zoo map</button>
+<div class="heading">
 
-<marquee  behavior="slide" direction="left">
-    <img src="../static/Images/index.jpeg" width="120" height="80" alt="Natural" />
-    <img src="../static/Images/tiger.jpeg" width="120" height="80" alt="Natural" />
-    <img src="../static/Images/panda.jpeg" width="120" height="80"  alt="Natural" />
-    <img src="../static/Images/croc.jpeg" width="120" height="80"  alt="Natural" />
-    <img src="../static/Images/pea.jpeg" width="120" height="80"   alt="Natural" />
-    <img src="../static/Images/deer.jpeg" width="120" height="80"  alt="Natural" />
-    <img src="../static/Images/king.jpeg" width="120" height="80"   alt="Natural" />
-    <img src="../static/Images/fish.jpeg" width="120" height="80"  alt="Natural" />
-  </marquee>
+  <h3 >Explore!</h3> 
+</div>
 
-&nbsp;<div class="div1">Visit to a zoo offers us an oppurtunity to see the wild animals.Zoo ia a place where we can see different species of animals and birds in one place.A visit to a zoo gives us both entertainment and information.</div>
-<h3 style="text-align:center;">Explore!</h3> 
 
-<div class="container">Timings: <br/> <br/>ZOO: 9am to 7pm <br/>Safari: 10am to 5pm<br/> BUTTERFLY PARK:9am to 5pm<br/> BOATING:11am to 5pm</div>
+<div class='container'>Timings: <br/> <br/>ZOO: 9am to 7pm <br/>Safari: 10am to 5pm<br/> BUTTERFLY PARK:9am to 5pm<br/> BOATING:11am to 5pm</div>
 
 
 <div class='box'>Tickets: <br/> <br/>Zoo &nbsp; &nbsp; &nbsp; Mon-Fri&nbsp; &nbsp; Weekends<br/>Adults &nbsp; &nbsp; Rs100/- &nbsp; &nbsp; Rs150/-<br/> 
 Children &nbsp;  Rs 50/- &nbsp; Rs80/-&nbsp;&nbsp; &nbsp;<br/>Sen citz &nbsp; Rs70/-&nbsp; &nbsp;  &nbsp;Rs90/-&nbsp; &nbsp;&nbsp;
 
 </div>
-<div class='container'>Facilities:<br/><br/> Battery operated vehicles<br/> Parking space<br/> Restrooms/Baby care unit<br/> Cloak room<br/>AT<M<br/>Restuarnts</div>
+<div class='contain'>Facilities:<br/><br/> Battery operated vehicles<br/> Parking space<br/> Restrooms/Baby care unit<br/> Cloak room<br/>ATM<br>Restuarnts</div>
 
-<div class='box1'>Places to see:<br/><br/> Aquarium<br/>Butterfly park</br>safari<br/>Boating<br/>Watch Tower</div>
+<div class='box1'>Places to see:<br/><br/> Aquarium<br/>Butterfly park<br/>safari<br/>Boating<br/>Watch Tower</div>
 
 
 <style>
+h2{
+text-align: center;
+}
+
+.heading h3{
+text-align: center;
+top:160px; 
+margin-top:200px;
+}
+
+
+
 div.zoo{
  border:10px solid green;
  width:350px;
- 
  padding: 10px;
  margin:10px;
- 
  background-color:grey;
- 
  text-align:center;
-
  right:10px;
  position:absolute;
  right:15px;
- top:610px;
+ top:625px;
+ color:white;
  height:140px;
 }
+
+
 .map{
- 
  width:350px;
- 
  padding: 0px;
  border:white;
- 
  background-color:grey;
- 
- 
-
  right:20px;
  position:absolute;
  right:47px;
- top:666px;
+ top:676px;
 }
 
 </style>
@@ -206,19 +244,15 @@ div.zoo{
 div.vis{
 
  width:700px;
- 
  padding: 10px;
-
- 
  background-color:BurlyWood;
- 
  text-align:center;
-
- right:100px;
+ right:300px;
  position:absolute;
  border:1px BurlyWood;
  top:1000px;
  height:140px;
+ color:red;
 }
 
 
@@ -234,6 +268,6 @@ div.vis{
 
 
 
-<div class="con">contact us &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Find us on:<br/>The Executive Director &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;varshinikmohan09@gmail.com <br/>BAnglore zoo reserve&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</br> Bannerghatta Banglore</br>Pin-560083</div>
+<div class="con">Contact us &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;Find us on:<br/>The Executive Director &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;varshinikmohan09@gmail.com <br/>Bangalore zoo reserve&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;</br> Bannerghatta Bangalore</br>Pin-560083</div>
 </body>
 </html>

@@ -210,6 +210,33 @@ def logout(request):
     return redirect('Indexa')
 
 
+def  selectstaff(request):
+    sta=Staff.objects.all()
+    return render(request,'selectstaff.html',{'data':sta})
+
+
+def  selectticket(request):
+    tic=Ticket.objects.all()
+    return render(request,'selectticket.html',{'data':tic})
+
+def  selectvisitor(request):
+    vis=Visitor.objects.all()
+    return render(request,'selectvisitor.html',{'data':vis})
+
+def  selectspecies(request):
+    spe=Species.objects.all()
+    return render(request,'selectspecies.html',{'data':spe})  
+
+
+def  selectanimal(request):
+    ani=Animal.objects.all()
+    return render(request,'selectanimal.html',{'data':ani})   
+
+
+def  selectlooksafter(request):
+    la=Looks_After.objects.all()
+    return render(request,'selectlooksafter.html',{'data':la})
+
 
 def deletealldata(request):
     obj=Staff.objects.all()
@@ -231,7 +258,7 @@ def storedProcedure(request):
   cursor = connection.cursor()
   cursor.callproc('animals')
   animalDetails=cursor.fetchall()
-  return render(request, 'storedProcedure.html', {'animalDetails': animalDetails})
+  return render(request,'storedProcedure.html', {'animalDetails': animalDetails})
 
 
 
@@ -239,9 +266,4 @@ def query2(request):
   var = Looks_After.objects.filter(staff=OuterRef('staff_id'))
   vari = Staff.objects.filter(~Exists(var))
   return render(request, 'query2.html',{'data':vari})  
-
-
-
-    
-    
     

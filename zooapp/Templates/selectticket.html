@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title >TICKET DATA</title>
+</head>
+<body>
+
+<h3> TICKET DATA</h3>
+<table border="4">
+<th>ticket_id</th>
+<th>cost</th>
+<th>checkintime</th>
+<th>checkouttime</th>
+<th>payment-type</th>
+{% for d in data %}
+<tr>
+    <td>{{d.ticket_id}}</td>
+    <td>{{d.cost}}</td>
+    <td>{{d.checkin_time}}</td>
+    <td>{{d.checkout_time}}</td>
+    <td>{{d.payment_type}}</td>
+
+</tr>
+{% endfor %}
+</table>       

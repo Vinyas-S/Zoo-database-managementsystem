@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title >STAFF DATA</title>
+</head>
+<body>
+<h3> Staff Data</h3>
+<table border="4">
+<th>staff_id</th>
+<th>staff_name</th>
+<th>contact number</th>
+<th>designation</th>
+<th>staff</th>
+<th>joining-date</th>
+{% for d in data %}
+<tr>
+    <td>{{d.staff_id}}</td>
+    <td>{{d.staff_name}}</td>
+    <td>{{d.contact_number}}</td>
+    <td>{{d.designation}}</td>
+    <td>{{d.salary}}</td>
+    <td>{{d.joining_date}}</td>
+</tr>
+{% endfor %}
+</table>       
+</body>

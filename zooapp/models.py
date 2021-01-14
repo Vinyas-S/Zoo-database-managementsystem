@@ -5,7 +5,7 @@ from django.db import models
 class Staff(models.Model):
     staff_id=models.IntegerField(primary_key=True)
     staff_name=models.CharField(max_length=30)
-    contact_number=models.IntegerField(max_length=12,null=False, blank=False, unique=True)
+    contact_number=models.IntegerField(max_length=12,null=False, blank=False, unique=True,)
     designation=models.CharField(max_length=30)
     salary=models.DecimalField(max_digits=10,decimal_places=3)
     joining_date=models.DateField()

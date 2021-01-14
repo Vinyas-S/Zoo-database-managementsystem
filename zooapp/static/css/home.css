@@ -13,6 +13,7 @@
 #navlinks{
     
     color: white;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,6 +29,7 @@ h3{
   
   #navlinks a {
     color: white;
+    background-color:black;
     font-size: large;
     margin: 8px;
     padding: 10px; 
@@ -71,7 +73,13 @@ body {
   height: 50%;
 }
 
-#list{
 
+#navigate{
+  background-attachment: fixed;
+    background-color: black;
+    overflow: hidden;
+}
 
+nav{
+  background-attachment: fixed;
 }

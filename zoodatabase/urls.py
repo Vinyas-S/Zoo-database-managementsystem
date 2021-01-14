@@ -53,6 +53,13 @@ urlpatterns = [
     path('deletealldata/', deletealldata,name='deletealldata'),
     path('storedProcedure/',storedProcedure, name='storedProcedure'),
     path('query2/',query2,name='query2'),
+    path('selectstaff/',selectstaff,name='selectstaff'),
+    path('selectticket/',selectticket,name='selectticket'),
+    path('selectvisitor/',selectvisitor,name='selectvisitor'),
+    path('selectspecies/',selectspecies,name='selectspecies'),
+    path('selectanimal/',selectanimal,name='selectanimal'),
+    path('selectlooksafter/',selectlooksafter,name='selectlooksafter'),
+
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

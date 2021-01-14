@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title >SPECIES DATA</title>
+</head>
+<body>
+
+<h3>SPECIES DATA</h3>
+<table border="4">
+<th>species_name</th>
+<th>population_stat</th>
+{% for d in data %}
+<tr>
+    <td>{{d.speciesname}}</td>
+    <td>{{d.population_status}}</td>
+</tr>
+{% endfor %}
+</table>          

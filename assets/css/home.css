@@ -5,7 +5,6 @@
 
 #navigation{
     background-attachment: fixed;
-    background-color: black;
     overflow: hidden;
     
 }
@@ -24,6 +23,7 @@ h3{
 
 #navlinks {
     margin-right: 10px;
+    
   }
   
   #navlinks a {
@@ -32,6 +32,7 @@ h3{
     margin: 12px;
     padding: 20px; 
     text-decoration: none;
+    
   }
 
   #heading {
@@ -46,7 +47,7 @@ h3{
 	font-weight: normal;
 	text-transform: normal;
 	letter-spacing: normal;
-    line-height: 1.3em;	
+  line-height: 1.3em;	
 }
 
 body {
@@ -69,4 +70,9 @@ body {
 .bg-image {
   /* Full height */
   height: 50%;
+}
+
+nav{
+  color:black;
+  background-color: black;
 }
